@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CareConnect Clinic</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= LOGIN ================= -->
+<div id="authView" class="view">
+  <h1>CareConnect Clinic</h1>
+  <p class="subtitle">Login or Signup</p>
+
+  <input id="authName" placeholder="Username" />
+  <input id="authPhone" placeholder="Phone Number" />
+
+  <button onclick="signup()">Signup</button>
+  <button onclick="login()">Login</button>
+
+  <p id="authMsg"></p>
+</div>
+
+<!-- TOP TOGGLE (HIDDEN BY DEFAULT) -->
+<div id="topToggle" class="top-toggle hidden" style="display:none;">
+  <button onclick="showPatient()">Patient Dashboard</button>
+  <button onclick="showDoctor()">Doctor Dashboard</button>
+  <button class="logout" onclick="logout()">Logout</button>
+</div>
+
+<!-- ================= PATIENT DASHBOARD ================= -->
+<div id="patientView" class="view hidden">
+  <h1>Patient Dashboard</h1>
+  <p class="subtitle">Book an appointment</p>
+
+  <form id="bookingForm">
+    <input id="patientName" placeholder="Patient Name" required />
+    <input id="patientPhone" placeholder="Phone Number" required />
+
+    <select id="doctorSelect">
+      <option>Dr. Riya Mehta (Cardiologist)</option>
+      <option>Dr. Arjun Kumar (Pediatrician)</option>
+      <option>Dr. Sneha Nair (Dermatologist)</option>
+      <option>Dr. Vikram Singh (Orthopedic)</option>
+    </select>
+
+    <input type="date" id="appointmentDate" required />
+
+    <select id="appointmentTime">
+      <option>09:00 AM</option>
+      <option>11:00 AM</option>
+      <option>02:30 PM</option>
+      <option>04:00 PM</option>
+    </select>
+
+    <textarea id="visitReason" placeholder="Reason for visit"></textarea>
+
+    <button type="submit">Book Appointment</button>
+    <p id="formMessage"></p>
+  </form>
+
+  <h2>My Appointments</h2>
+  <div id="appointmentsList"></div>
+</div>
+
+<!-- ================= DOCTOR DASHBOARD ================= -->
+<div id="doctorView" class="view hidden">
+  <h1>Doctor Dashboard</h1>
+  <p class="subtitle">Manage Appointments</p>
+
+  <button onclick="exportBookings()">Export Bookings (CSV)</button>
+  <div id="doctorAppointments"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

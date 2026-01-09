@@ -1,0 +1,68 @@
+body {
+  background: #020617;
+  color: #e5e7eb;
+  font-family: Inter, sans-serif;
+  padding: 20px;
+}
+
+.view {
+  max-width: 420px;
+}
+
+.hidden {
+  display: none;
+}
+
+.subtitle {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.top-toggle {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: #22c55e;
+  color: #052e16;
+  font-size: 0.75rem;
+}
+
+.logout {
+  background: #ef4444;
+  color: white;
+}
+
+input, select, textarea {
+  width: 100%;
+  margin: 6px 0;
+  padding: 7px;
+  background: #0f172a;
+  border: 1px solid rgba(148,163,184,.4);
+  color: #e5e7eb;
+  border-radius: 8px;
+}
+
+.appointment-card {
+  background: #0f172a;
+  border: 1px solid rgba(148,163,184,.3);
+  border-radius: 12px;
+  padding: 10px;
+  margin-top: 8px;
+  font-size: 0.75rem;
+}
+
+.confirm {
+  background: #22c55e;
+}
+
+.cancel {
+  background: #ef4444;
+  color: white;
+}
